@@ -2,6 +2,9 @@
 
 :root {
   --primarycolor: #047aed;
+  --secondarycolor: #1c3fa8;
+  --darkcolor: #002240;
+  --lightcolor: #f4f4f4;
 }
 
 * {
@@ -131,4 +134,55 @@ img {
 .stats-heading {
   max-width: 500px;
   margin: auto;
+}
+
+.stats .grid h3 {
+  font-size: 35px;
+}
+
+.stats .grid p {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primarycolor);
+}
+
+/* Cli */
+.cli .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.cli img {
+  grid-column: 1 / span 2;
+  justify-self: center;
+  grid-row: span 2;
+}
+
+.cli div:nth-child(3) {
+  grid-column-start: 3;
+}
+
+/* Cloud */
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
+}
+
+/* Languages */
+.languages .flex {
+  flex-wrap: wrap;
+}
+
+.languages .card{
+  text-align: center;
+  margin: 18px 10px 40px;
+  transition: transform 0.1s ease-in;
+}
+
+.languages .card:hover {
+  transform: translateY(-15px);
+}
+
+.languages .card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
