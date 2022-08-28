@@ -78,6 +78,10 @@ img {
   margin: 20px 0;
 }
 
+.showcase-text {
+  max-width: 100%;
+}
+
 .showcase .grid {
   overflow: visible;
   grid-template-columns: 55% 45%;
@@ -88,7 +92,8 @@ img {
   position: relative;
   top: 60px;
   height: 350px;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   padding: 40px;
   z-index: 100;
   justify-self: flex-end;
@@ -185,4 +190,61 @@ img {
 .languages .card h4 {
   font-size: 20px;
   margin-bottom: 10px;
+}
+
+/* Footer */
+.footer .social a {
+  margin: 0 10px;
+}
+
+/* Tablets and Smaller */
+@media(max-width: 768px) {
+  .grid,
+  .showcase .grid,
+  .stats .grid,
+  .cloud .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .footer .grid {
+    text-align: center;
+  }
+
+  .cli .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .cli div:nth-child(2) {
+    grid-row: 1 / 2;
+  }
+
+  .cli img {
+    grid-row: 2 / 3;
+  }
+
+  .cli div:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+}
+
+/* Mobile */
+@media(max-width: 500px) {
+  .navbar {
+    height: 110px;
+  }
+
+  .navbar .flex {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    padding: 10px;
+    background-color: rgba(0,0,0,0.1);
+  }
 }
