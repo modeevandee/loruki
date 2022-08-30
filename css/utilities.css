@@ -63,6 +63,21 @@
 .btn-dark a{
   color: #fff;
 }
+
+/* Text Colors */
+.text-primary {
+  color: var(--primarycolor);
+}
+.text-secondary {
+  color: var(--secondarycolor);
+}
+.text-dark {
+  color: var(--darkcolor);
+}
+.text-light {
+  color: var(--lightcolor);
+}
+
 /* Text Sizes */
 .lead {
   font-size: 20px;
@@ -102,6 +117,28 @@
 
 .grid-3 {
   grid-template-columns: repeat(3, 1fr);
+}
+
+/* Alerts */
+.alert {
+  background-color: var(--lightcolor);
+  padding: 10px 20px;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.alert > i{
+  margin-right: 10px;
+}
+
+.alert-success {
+  background-color: var(--successcolor);
+  color: #fff;
+}
+
+.alert-error {
+  background-color: var(--errorcolor);
+  color: #fff;
 }
 
 /* Margin */
